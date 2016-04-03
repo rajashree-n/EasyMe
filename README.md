@@ -1,2 +1,2 @@
 # EasyMe
-An DEsktop App!
+ Desktop App!
