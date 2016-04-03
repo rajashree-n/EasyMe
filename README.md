@@ -1,2 +1,4 @@
 # EasyMe
-An DEsktop App!
+ Desktop App!
+It includes memo, contacts manager, calculator and calendar.
+Requirements: Nodejs, Electron and MongoDB
