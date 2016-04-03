@@ -1,0 +1,145 @@
+<html>
+<title>EasyMe</title>
+
+<!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css" /> 
+<!--Bootstrap--->
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- custom JS, if any, goes below this line -->
+<script src="mongo.js"></script>
+<script src="main.js"></script>
+<!-- custom CSS, if any, goes below this line -->
+<link rel="stylesheet" href="static/all.css">
+</head>
+
+<body>
+<!-- body starts here -->
+
+ <br><br>
+<center>
+<span class="mdl-layout-title"><span class="mdl-layout-title"><p1>EASY ME</p1><br> <h5>Makes your work easy :) </h5> 
+</span></span>
+
+<br><br>
+<div class="container">
+
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__header--sorted-ascending">Name</th>
+      <th>Phone no.</th>
+      <th>E-mail id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="mdl-data-table__header--sorted-ascending"><div class="material-icons mdl-badge mdl-badge--overlap" >account_box</div>Mukund Naik</td>
+      <td>9820090644</td>
+      <td>naikmukund@yahoo.com</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__header--sorted-ascending"><div class="material-icons mdl-badge mdl-badge--overlap" >account_box</div>Rajashree Naik</td>
+      <td>7208103372</td>
+      <td>rajashreenaik14@gmail.com</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__header--sorted-ascending"><div class="material-icons mdl-badge mdl-badge--overlap" >account_box</div>Sadhana Naik</td>
+      <td>9820145129</td>
+      <td>naiksadhana@gmail.com</td>
+    </tr>
+  </tbody>
+</table>
+<!-- FAB button with ripple -->
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" data-toggle="modal" data-target="#myModal">
+  <i class="material-icons">add</i>
+</button>
+
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">ADD Contact</h4>
+        </div>
+        <div class="modal-body">
+          
+<form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Name:</label>
+    <div class="col-sm-10">
+      <input type="name" class="form-control" id="name" placeholder="Enter name">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pno">Phone no:</label>
+    <div class="col-sm-10">
+      <input type="phone" class="form-control" id="pno" placeholder="Enter phone no.">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<br>
+<a href="index1.html" >
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" >
+  Back
+</button>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>	
+<script>
+$.ajax({
+   url: 'http://127.0.0.1:8080/getmemos',
+   success: (result) => {
+     	console.log(result['data'][1]);                   
+   }			
+});
+$(document).ready(function()
+{   
+
+    // handle button clicks         
+    $('#btncon').click(function() {
+
+        // make an ajax call
+        $.ajax({
+            data:url,
+            type: 'POST',
+            url: 'addcontacts.php',
+            success: function(responseText) { message.html('$('#btnmemo').click(function() { message.html ('memo') '})) }
+            });
+    });
+   
+});
+</script>
+
+</body>
