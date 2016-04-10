@@ -21,7 +21,7 @@ module.exports = (app) => {
                                 db.close();
                             }
                             else {
-                                res.status(200).json({message: 'Okay! Worship Abhishek'});
+                                res.status(200).json({message: 'Okay!'});
                                 db.close();
                             }
                         });
@@ -30,7 +30,7 @@ module.exports = (app) => {
             );
 		}
 		else {
-			res.sendStatus(500).json({message: 'abhishek says NO!'});
+			res.status(500).json({message: 'NO!'});
 		}
 	});
 	app.post('/addmemo', (req, res) => {
@@ -51,7 +51,7 @@ module.exports = (app) => {
                                 db.close();
                             }
                             else {
-                                res.status(200).json({message: 'Okay! Worship Abhishek'});
+                                res.status(200).json({message: 'Okay! '});
                                 db.close();
                             }
                         });
@@ -60,7 +60,7 @@ module.exports = (app) => {
             );
 		}
 		else {
-			res.status	(500).json({message: 'abhishek says NO!'});
+			res.status	(500).json({message: 'NO!'});
 		}
 	});
 	app.get('/getcontacts', (req, res) => {
@@ -81,7 +81,7 @@ module.exports = (app) => {
             );
 		}
 		else {
-			res.sendStatus(500).json({message: 'abhishek says NO!'});
+			res.sendStatus(500).json({message: 'NO!'});
 		}
 	});
 	app.get('/getmemos', (req, res) => {
@@ -102,7 +102,7 @@ module.exports = (app) => {
             );
 		}
 		else {
-			res.sendStatus(500).json({message: 'abhishek says NO!'});
+			res.sendStatus(500).json({message: 'NO!'});
 		}
 	});
 }

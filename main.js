@@ -1,10 +1,10 @@
-'use strict'
+
 
 let app = require('app');
 let BrowserWindow = require('browser-window');
 let http = require('http');
 let express = require('express')();
-let MongoClient = require('mongodb').MongoClient;
+
 let mainWindow = null;
 let bodyParser = require('body-parser');
 
