@@ -13,11 +13,11 @@ h5
 {color: white;
 }
 .container
-{ width:50%;
+{ width:70%;
   color : gray;
 }
 .demo-card-square.mdl-card {
-  width: 320px;
+  width: 520px;
   height: 320px;
 }
 .demo-card-square > .mdl-card__title {
